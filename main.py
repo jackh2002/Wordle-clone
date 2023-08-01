@@ -25,7 +25,7 @@ def wordle():
         [sg.Text(guess_5[0],text_color="black", background_color=result_5[0], size=(2,1),  justification="center", font=("Arial",36), key="G51"),sg.Text(guess_5[1],text_color="black", background_color=result_5[1], size=(2,1),  justification="center", font=("Arial",36), key="G52"),sg.Text(guess_5[2],text_color="black", background_color=result_5[2], size=(2,1),  justification="center", font=("Arial",36), key="G53"),sg.Text(guess_5[3], text_color="black", background_color=result_5[3], size=(2,1),  justification="center", font=("Arial",36), key="G54"),sg.Text(guess_5[4],text_color="black", background_color=result_5[4], size=(2,1),  justification="center", font=("Arial",36), key="G55")],
         [sg.Text(guess_6[0],text_color="black", background_color=result_6[0], size=(2,1),  justification="center", font=("Arial",36), key="G61"),sg.Text(guess_6[1],text_color="black", background_color=result_6[1], size=(2,1),  justification="center", font=("Arial",36), key="G62"),sg.Text(guess_6[2],text_color="black", background_color=result_6[2], size=(2,1),  justification="center", font=("Arial",36), key="G63"),sg.Text(guess_6[3], text_color="black", background_color=result_6[3], size=(2,1),  justification="center", font=("Arial",36), key="G64"),sg.Text(guess_6[4],text_color="black", background_color=result_6[4], size=(2,1),  justification="center", font=("Arial",36), key="G65")],
         [sg.Text("INPUT GUESS BELOW:", font=("Arial",22))],
-        [sg.InputText(font=("Arial",22),size=(15,2),key="GUESS",background_color="white",text_color="Black"),sg.Button("SUBMIT", size=(7,2))]
+        [sg.InputText(font=("Arial",22),size=(15,2),key="GUESS",background_color="white",text_color="Black"),sg.Button("SUBMIT", size=(7,2), bind_return_kay=True)]
     ]
 
     screen = sg.Window("Wordle", layout, element_justification= "center")
@@ -121,16 +121,6 @@ def wordle():
             break
     screen.close()
     return results
-
-
-
-
-
-
-
-
-
-
 results = wordle()
 
 
