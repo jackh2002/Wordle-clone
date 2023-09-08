@@ -121,7 +121,9 @@ def wordle():
             break
     screen.close()
     return results
-results = wordle()
+    
+while True:
+    results = wordle()
 
 
 
